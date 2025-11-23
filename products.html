@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--META TAGS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Responsive meta tag for mobile devices -->
+    <title>Products - Gianni's Barbering Supplies</title>
+    <!-- Page title for browser tab -->
+    
+    <!--STYLESHEET-->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Link to external CSS file -->
+</head>
+<body>
+    
+    <!--HEADER & NAVIGATION-->
+    <!-- Same header on all pages for consistency -->
+    <header>
+        <div class="container">
+            
+            <!-- Logo/Business Name -->
+            <div class="logo-section">
+                <div class="logo-text">
+                    <h1>Gianni's Barbering Supplies✂️</h1>
+                    <!-- Main heading -->
+                    <p class="tagline">Excellence in Every Cut</p>
+                    <!-- Business tagline -->
+                </div>
+            </div>
+            
+            <!-- Navigation Menu -->
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <!-- Back to homepage -->
+                    <li><a href="products.html">Products</a></li>
+                    <!-- Current page -->
+                    <li><a href="cart.html">Cart <span id="cart-count">(0)</span></a></li>
+                    <!-- Cart with item counter -->
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="register.html">Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT-->
+    <main>
+        
+        <!-- PRODUCTS CATALOG SECTION-->
+        <!-- Displays all 8 products with images -->
+        <section class="products-section">
+            <div class="container">
+                <h2>💈Our Premium Products💈</h2>
+                <!-- Page heading -->
+                
+                <p class="text-center" style="margin-bottom: 2rem;">
+                    Discover our complete range of professional barbering supplies for all genders
+                </p>
+                <!-- Description text centered and styled -->
+                
+                <!-- Product Grid Container -->
+                <div class="product-grid" id="all-products">
+                    <!-- This div is filled by JavaScript -->
+                    <!-- JavaScript function loadAllProducts() runs on page load -->
+                    <!-- Creates product cards for all 8 products -->
+                    <!-- Each card includes:
+                         - Product image from images/products/ folder
+                         - Product name
+                         - Description
+                         - Price with $ symbol
+                         - Add to Cart button
+                    -->
+                </div>
+    
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <!-- Footer with 3 columns -->
+            <div class="footer-content">
+                
+                <!-- About Column -->
+                <div class="footer-section">
+                    <h3>Gianni's Barbering Supplies✂️</h3>
+                    <p>Your trusted source for professional barbering tools and supplies since 2020.</p>
+                </div>
+                
+                <!-- Quick Links Column -->
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="login.html">Account</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Column -->
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Email: info@giannis-barbering.com</p>
+                    <p>Phone: 1-876-555-CUTS</p>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="footer-bottom">
+                <p>&copy; 2025 Gianni's Barbering Supplies. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+    <!-- External JavaScript file handles:
+         - Loading all 8 products from products array
+         - Creating product cards dynamically
+         - Adding images from images/products/ folder
+         - Handling "Add to Cart" button clicks
+         - Updating cart count in navigation
+    -->
+</body>
+</html>

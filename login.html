@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<!-- HTML5 doctype -->
+<html lang="en">
+<head>
+    <!-- META INFORMATION -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Gianni's Barbering Supplies</title>
+    
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <div class="logo-section">
+                <div class="logo-text">
+                    <h1>Gianni's Barbering Supplies✂️</h1>
+                    <p class="tagline">Excellence in Every Cut</p>
+                </div>
+            </div>
+            
+            <!-- Navigation -->
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="cart.html">Cart <span id="cart-count">(0)</span></a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <!-- Current page -->
+                    <li><a href="register.html">Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        
+        <!-- LOGIN FORM CONTAINER -->
+        <!-- Form wrapped in container for centered card style -->
+        <div class="form-container">
+            <h2>Login to Your Account</h2>
+            <!-- Form heading -->
+            
+            <!-- Login Form -->
+            <form id="login-form">
+                <!-- Form ID used by JavaScript for event handling -->
+                <!-- Form submission handled by JavaScript (prevents page reload) -->
+                
+                <!-- Username Field -->
+                <div class="form-group">
+                    <!-- form-group wraps label, input, and error message -->
+                    <label for="username">Username *</label>
+                    <!-- Label linked to input via "for" attribute -->
+                    <!-- Asterisk indicates required field -->
+                    <input type="text" id="username" name="username" required>
+                    <!-- Text input for username -->
+                    <!-- "required" attribute adds HTML5 validation -->
+                    <!-- ID matches label's "for" attribute -->
+                    <div class="error-message"></div>
+                    <!-- Empty div for displaying validation errors via JavaScript -->
+                </div>
+                
+                <!-- Password Field -->
+                <div class="form-group">
+                    <label for="password">Password *</label>
+                    <input type="password" id="password" name="password" required>
+                    <!-- type="password" hides characters as user types -->
+                    <div class="error-message"></div>
+                    <!-- Error message container -->
+                </div>
+                
+                <!-- Submit Button -->
+                <button type="submit" class="btn-primary">Login</button>
+                <!-- type="submit" triggers form submission -->
+                <!-- JavaScript intercepts submission for validation -->
+                <!-- On success: checks credentials against localStorage -->
+                <!-- If valid: redirects to homepage -->
+                <!-- If invalid: shows error message -->
+            </form>
+            <!-- End login form -->
+            
+            <!-- Registration Link -->
+            <p class="text-center" style="margin-top: 1.5rem;">
+                Don't have an account? 
+                <a href="register.html" style="color: var(--primary-red); font-weight: bold;">
+                    Register here
+                </a>
+            </p>
+            <!-- Link to registration page for new users -->
+        </div>
+    </main>
+
+    <!-- FOOTER-->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Gianni's Barbering Supplies✂️</h3>
+                    <p>Your trusted source for professional barbering tools and supplies since 2020.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="login.html">Account</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Email: info@giannis-barbering.com</p>
+                    <p>Phone: 1-876-555-CUTS</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Gianni's Barbering Supplies. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script src="script.js"></script>
+    <!-- JavaScript handles:
+         - Form submission interception
+         - Input validation
+         - Checking credentials against localStorage
+         - Error message display
+         - Redirect on successful login
+         - Storing current user in localStorage
+    -->
+</body>
+</html>
+<!-- End login page -->

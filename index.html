@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- META INFORMATION -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Makes website responsive on mobile devices -->
+    <title>Gianni's Barbering Supplies - Premium Tools for All</title>
+    <!-- Page title shown in browser tab and search results -->
+    
+    <!--EXTERNAL RESOURCES -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Links to external CSS file for all styling -->
+</head>
+<body>
+    <!-- Main body content begins here -->
+    
+    <!-- HEADER & NAVIGATION-->
+    <!-- Header appears on every page with logo and navigation menu -->
+    <header>
+        <div class="container">
+            <!-- Container centers content and adds padding -->
+            
+            <!-- Business branding section -->
+            <div class="logo-section">
+                <div class="logo-text">
+                    <h1>Gianni's Barbering Supplies✂️</h1>
+                    <!-- H1 tag for SEO - main heading of page -->
+                    <p class="tagline">Excellence in Every Cut</p>
+                    <!-- Business slogan/tagline -->
+                </div>
+            </div>
+            
+            <!-- Main navigation menu -->
+            <nav>
+                <ul>
+                    <!-- Unordered list for semantic navigation -->
+                    <li><a href="index.html">Home</a></li>
+                    <!-- Link to homepage (current page) -->
+                    <li><a href="products.html">Products</a></li>
+                    <!-- Link to full products catalog -->
+                    <li><a href="cart.html">Cart <span id="cart-count">(0)</span></a></li>
+                    <!-- Cart link with dynamic counter updated by JavaScript -->
+                    <li><a href="about.html">About Us</a></li>
+                    <!-- Link to about page with student information -->
+                    <li><a href="login.html">Login</a></li>
+                    <!-- Link to user login page -->
+                    <li><a href="register.html">Register</a></li>
+                    <!-- Link to user registration page -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <!-- Large banner section at top of homepage to grab attention -->
+    <section class="hero">
+        <div class="container">
+            <h2>Premium Barbering Supplies for Every Professional✅</h2>
+            <!-- Main heading explaining what the site offers -->
+            <p>⭐⭐⭐⭐⭐Discover top-quality tools and products for barbers serving all genders⭐⭐⭐⭐⭐</p>
+            <!-- Supporting text describing the business -->
+            <a href="products.html" class="cta-button">Shop Now 🛒</a>
+            <!-- Call-to-action button linking to products page -->
+        </div>
+    </section>
+
+        <!-- MAIN CONTENT AREA --> 
+    <main>
+        <!-- Semantic main tag contains primary page content -->
+        
+        <!--CATEGORIES SECTION-->
+        <!-- Displays product categories for easy navigation -->
+        <section class="categories">
+            <div class="container">
+                <h2>Shop by Category</h2>
+                <!-- Section heading -->
+                
+                <!-- Grid layout for category cards -->
+                <div class="category-grid">
+                    <!-- CSS Grid makes this responsive automatically -->
+                    
+                    <!-- Category 1: Clippers & Trimmers -->
+                    <div class="category-card">
+                        <div class="category-icon">✂️</div>
+                        <!-- Emoji icon represents category visually -->
+                        <h3>Clippers & Trimmers</h3>
+                        <!-- Category name -->
+                        <p>Professional-grade cutting tools</p>
+                        <!-- Brief description -->
+                        <a href="products.html?category=clippers" class="category-link">Browse</a>
+                        <!-- Link filters products page to show only clippers -->
+                    </div>
+                    
+                    <!-- Category 2: Styling Products -->
+                    <div class="category-card">
+                        <div class="category-icon">💈</div>
+                        <!-- Barber pole emoji -->
+                        <h3>Styling Products</h3>
+                        <p>Pomades, gels, and styling essentials</p>
+                        <a href="products.html?category=styling" class="category-link">Browse</a>
+                        <!-- Link filters to styling products only -->
+                    </div>
+                    
+                    <!-- Category 3: Shaving Supplies -->
+                    <div class="category-card">
+                        <div class="category-icon">🪒</div>
+                        <!-- Razor emoji -->
+                        <h3>Shaving Supplies</h3>
+                        <p>Razors, creams, and aftershaves</p>
+                        <a href="products.html?category=shaving" class="category-link">Browse</a>
+                        <!-- Link filters to shaving products only -->
+                    </div>
+                    
+                    <!-- Category 4: Combs & Brushes -->
+                    <div class="category-card">
+                        <div class="category-icon">🪮</div>
+                        <!-- Comb emoji -->
+                        <h3>Combs & Brushes</h3>
+                        <p>Essential styling tools</p>
+                        <a href="products.html?category=combs" class="category-link">Browse</a>
+                        <!-- Link filters to combs and brushes only -->
+                    </div>
+                </div>
+                <!-- End of category grid -->
+            </div>
+        </section>
+
+        <!--  FEATURED PRODUCTS SECTION -->
+        <!-- Shows 4 featured products with images -->
+        <section class="featured-products">
+            <div class="container">
+                <h2>Featured Products</h2>
+                <!-- Section heading -->
+                
+                <div class="product-grid" id="featured-products">
+                    <!-- This div is populated by JavaScript -->
+                    <!-- JavaScript loads first 4 products from product array -->
+                    <!-- Each product shows: image, name, description, price, add to cart button -->
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY CHOOSE US SECTION -->
+        <!-- Displays business value propositions -->
+        <section class="features">
+            <div class="container">
+                <h2>Why Choose Gianni's?</h2>
+                <!-- Section heading -->
+                
+                <!-- Grid of feature highlights -->
+                <div class="features-grid">
+                    
+                    <!-- Feature 1: Premium Quality -->
+                    <div class="feature-item">
+                        <h3>🏆 Premium Quality</h3>
+                        <!-- Emoji + heading for visual interest -->
+                        <p>Only the finest barbering tools and supplies</p>
+                        <!-- Feature description -->
+                    </div>
+                    
+                    <!-- Feature 2: Fast Shipping -->
+                    <div class="feature-item">
+                        <h3>🚚 Fast Shipping</h3>
+                        <p>Quick delivery to your doorstep</p>
+                    </div>
+                    
+                    <!-- Feature 3: Satisfaction Guarantee -->
+                    <div class="feature-item">
+                        <h3>💯 Satisfaction Guaranteed</h3>
+                        <p>30-day money-back guarantee</p>
+                    </div>
+                    
+                    <!-- Feature 4: Expert Support -->
+                    <div class="feature-item">
+                        <h3>🌟 Expert Support</h3>
+                        <p>Professional advice from barbers</p>
+                    </div>
+                </div>
+                <!-- End features grid -->
+            </div>
+        </section>
+    </main>
+    <!-- End of main content -->
+
+    <!-- FOOTER -->
+    <!-- Footer appears on all pages with site info and links -->
+    <footer>
+        <div class="container">
+            <!-- Footer content in 3 columns -->
+            <div class="footer-content">
+                
+                <!-- Column 1: About Business -->
+                <div class="footer-section">
+                    <h3>Gianni's Barbering Supplies</h3>
+                    <p>Your trusted source for professional barbering tools and supplies since 2020.</p>
+                </div>
+                
+                <!-- Column 2: Quick Links -->
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="login.html">Account</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 3: Contact Info -->
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Email: info@giannis-barbering.com</p>
+                    <p>Phone: 1-876-555-CUTS</p>
+                </div>
+            </div>
+            <!-- End footer content columns -->
+            
+            <!-- Copyright notice -->
+            <div class="footer-bottom">
+                <p>&copy; 2025 Gianni's Barbering Supplies. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- End footer -->
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+    <!-- Links to external JavaScript file -->
+    <!-- This script handles: product loading, cart functions, user auth, form validation -->
+</body>
+</html>

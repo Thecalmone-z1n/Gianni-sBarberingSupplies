@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Gianni's Barbering Supplies✂️</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <div class="logo-section">
+                <div class="logo-text">
+                    <h1>Gianni's Barbering Supplies</h1>
+                    <p class="tagline">Excellence in Every Cut</p>
+                </div>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="cart.html">Cart <span id="cart-count">(0)</span></a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <!-- Current page -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!--MAIN CONTENT-->
+    <main>
+        
+        <!-- REGISTRATION FORM-->
+        <div class="form-container">
+            <h2>Create Your Account</h2>
+            
+            <form id="register-form">
+                <!-- Form ID for JavaScript event handling -->
+                
+                <!-- Full Name Field -->
+                <div class="form-group">
+                    <label for="fullname">Full Name *</label>
+                    <input type="text" id="fullname" name="fullname" required>
+                    <!-- Required field for user's complete name -->
+                    <div class="error-message"></div>
+                    <!-- JavaScript displays errors here -->
+                </div>
+                
+                <!-- Email Field -->
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                    <!-- type="email" provides built-in format validation -->
+                    <!-- JavaScript checks if email already exists (duplicate prevention) -->
+                    <div class="error-message"></div>
+                </div>
+                
+                <!-- Date of Birth Field -->
+                <div class="form-group">
+                    <label for="dob">Date of Birth *</label>
+                    <input type="date" id="dob" name="dob" required>
+                    <!-- type="date" provides calendar picker -->
+                    <div class="error-message"></div>
+                </div>
+                
+                <!-- Username Field -->
+                <div class="form-group">
+                    <label for="username">Username *</label>
+                    <input type="text" id="username" name="username" required 
+                           placeholder="3-20 characters, letters, numbers, underscore">
+                    <!-- Placeholder shows format requirements -->
+                    <!-- JavaScript validates: 3-20 chars, alphanumeric + underscore -->
+                    <!-- JavaScript checks if username already exists (duplicate prevention) -->
+                    <div class="error-message"></div>
+                </div>
+                
+                <!-- Password Field -->
+                <div class="form-group">
+                    <label for="password">Password *</label>
+                    <input type="password" id="password" name="password" required 
+                           placeholder="Minimum 6 characters">
+                    <!-- Placeholder hints at password requirement -->
+                    <!-- JavaScript validates minimum 6 characters -->
+                    <div class="error-message"></div>
+                </div>
+                
+                <!-- Confirm Password Field -->
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password *</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required>
+                    <!-- JavaScript checks this matches password field -->
+                    <div class="error-message"></div>
+                </div>
+                
+                <!-- Submit Button -->
+                <button type="submit" class="btn-primary">Register</button>
+                <!-- On submit, JavaScript validates all fields -->
+                <!-- Checks for duplicates (username and email) -->
+                <!-- Creates user object and saves to localStorage -->
+                <!-- Automatically logs user in after registration -->
+                <!-- Redirects to homepage on success -->
+            </form>
+            
+            <!-- Login Link -->
+            <p class="text-center" style="margin-top: 1.5rem;">
+                Already have an account? 
+                <a href="login.html" style="color: var(--primary-red); font-weight: bold;">
+                    Login here
+                </a>
+            </p>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Gianni's Barbering Supplies</h3>
+                    <p>Your trusted source for professional barbering tools and supplies since 2020.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="login.html">Account</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Email: info@giannis-barbering.com</p>
+                    <p>Phone: 1-876-555-CUTS</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Gianni's Barbering Supplies. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+    <!-- JavaScript provides:
+         - Real-time form validation
+         - Email format checking
+         - Username format validation (3-20 chars, alphanumeric + underscore)
+         - Password strength check (minimum 6 characters)
+         - Password confirmation matching
+         - DUPLICATE PREVENTION:
+           * Checks if username already exists in localStorage
+           * Checks if email already exists in localStorage
+           * Shows error if duplicate found
+         - User creation and storage in localStorage
+         - Automatic login after successful registration
+    -->
+</body>
+</html>
